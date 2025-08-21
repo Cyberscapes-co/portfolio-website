@@ -281,6 +281,30 @@ ul li {
   grid-gap: 0.9rem;
 }
 
+#blog {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto 5rem;
+}
+
+#blog .btn {
+  align-self: center;
+  margin: 2rem 0;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(250px, auto);
+  grid-gap: 0.9rem;
+}
+
+#pricing {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto 5rem;
+}
+
 .card .project-bio p {
   font-size: 0.83rem;
 }

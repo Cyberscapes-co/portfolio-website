@@ -267,7 +267,11 @@ body {
   flex-direction: column;
   margin: 2rem auto 5rem;
 }
-
+.pricing-cards {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  justify-content: flex-start;
+}
 #blog .btn {
   align-self: center;
   margin: 2rem 0;

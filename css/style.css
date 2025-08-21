@@ -372,7 +372,7 @@ body {
     flex-direction: column;
     width: calc(80% - 10px);
     transition: 0.3s;
-    box-shadow: var(--shadow);
+    box-shadow: zvar(--shadow);
     padding: 2rem;
     border-radius: 5px;
     align-items: flex-start;

@@ -163,7 +163,7 @@ body {
 .popup-menu a {
   color: black;
   font-size: 24px;
-  margin: 0 10px;
+  margin: 10 20px;
   text-decoration: none;
 }
 
@@ -391,6 +391,7 @@ body {
   display: inline-block; /* shrink to fit content */
   margin: 2rem auto; /* center horizontally */
   text-align: center;
+  border-radius: 999px;
 }
 
 #pricing {
@@ -475,6 +476,7 @@ body {
 #projects .btn {
   align-self: center;
   margin: 2rem 0;
+  border-radius: 999px;
 }
 
 .project {
@@ -484,35 +486,7 @@ body {
   width: 100%;
   box-sizing: border-box;
 }
-#blog {
-  display: flex;
-  flex-direction: column;
-  margin: 2rem auto 5rem;
-}
 
-#blog .btn {
-  align-self: center;
-  margin: 2rem 0;
-}
-#blog-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-@media (max-width: 1000px) {
-  #blog-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  #blog-container {
-    grid-template-columns: 1fr;
-  }
-}
 #pricing {
   display: flex;
   flex-direction: column;

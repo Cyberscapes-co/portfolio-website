@@ -226,6 +226,7 @@ body {
   .pricing-card {
     flex: 0 0 300px; /* fixed width per card */
     max-width: 300px;
+    margin-top: 10px;
   }
 }
 
@@ -250,6 +251,7 @@ body {
     flex: 0 0 85%; /* takes most of the screen width */
     scroll-snap-align: center;
     margin: 0 auto;
+    margin-top: 10px;
   }
 }
 

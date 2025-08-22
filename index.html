@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="jquery.js"></script> 
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -86,6 +85,7 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/utilities.css" />
+
   </head>
   <body>
     <header id="hero">
@@ -104,26 +104,12 @@
             <li><a class="nav-link" href="#pricing">PRICING</a></li>
             <li><a class="nav-link" href="#blog">BlOG</a></li>
             <li>
-              <a class="nav-link btn btn-primary" href=""
+              <a class="nav-link  btn btn-primary" href=""
                 >RESUME</i>
               </a>
             </li>
-
-            <!-- Toggle switch -->
-            <!-- <div class="theme-switch">
-              <input type="checkbox" id="switch" />
-              <label class="toggle-icons" for="switch">
-                <img class="moon" src="assets/moon.svg" />
-                <img class="sun" src="assets/sun.svg" />
-              </label>
-            </div> -->
-            <!-- Hamburger menu -->
+            </div> 
           </ul>
-          <!-- <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div> -->
         </div>
       </nav>
 
@@ -140,126 +126,35 @@
             frontend design, app design, and backend programming.
           </p>
         </div>
-        <div class="popup-wrapper">
-          <button class="contact-btn" id="contactBtn">Contact Me</button>
-          <div class="popup-menu" id="popupMenu">
-            <a href="https://instagram.com" target="_blank"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="https://twitter.com" target="_blank"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a href="mailto:you@example.com"><i class="fas fa-envelope"></i></a>
-          </div>
+      </div>
+      <div class="popup-wrapper">
+        <button class="contact-btn" id="contactBtn">Contact Me</button>
+        <div class="popup-menu" id="popupMenu">
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://twitter.com" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="mailto:you@example.com"><i class="fas fa-envelope"></i></a>
         </div>
-      </section>
-    </header>
+      </div>
+      </body>
 
-    
     <!-- Projects -->
     <section id="projects" class="project-container container">
       <div class="division"></div>
-      <div class="content-text">
-        <h2>Projects</h2>
-        <p>Check out some of my personal and paid projects</p>
-      </div>
-
-      <article class="project">
-        <!-- Project 1 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project One</h3>
-              <p>React, Redux, SASS</p>
-            </div>
-
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
+        <div class="content-text">
+          <h2>Projects</h2>
+          <p>Check out some of my personal and paid projects</p>
         </div>
 
-        <!-- Project 2 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Two</h3>
-              <p>React, Redux, SASS</p>
-            </div>
-
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Porject 3 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Three</h3>
-              <p>React, Redux, SASS</p>
-            </div>
-
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Four</h3>
-              <p>React, Redux, SASS</p>
-            </div>
-
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Five</h3>
-              <p>React, Redux, SASS</p>
-            </div>
-
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Six</h3>
-              <p>React, Redux, SASS</p>
-            </div>
-
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <a href="#" class="btn btn-secondary" target="_blank"
-        >See More <i class="fas fa-arrow-right"></i
-      ></a>
+        <div id="projects-container" class="projects-grid"></div>
+        <a href="#" class="btn btn-secondary" target="_blank"
+      >See More <i class="fas fa-arrow-right"></i
+    ></a>
     </section>
+
 
     <!-- Quota -->
     <section id="pricing" class="pricing-container container">
@@ -269,150 +164,24 @@
         <p>Kickstart your project with a cheap, customized app and website!</p>
       </div>
 
-      <div class="pricing-cards">
-        <div class="pricing-card">
-          <h3>Starter</h3>
-          <p class="price">$500</p>
-          <ul>
-            <li>Basic Website/App</li>
-            <li>Responsive Design</li>
-            <li>3 Revision</li>
-            <li>NoSQL backend</li>
-            <li>
-              Perfect for simple apps/websites in a modern and minimalistic
-              design
-            </li>
-          </ul>
-        </div>
-
-        <div class="pricing-card">
-          <h3>Professional</h3>
-          <p class="price">$1,200</p>
-          <ul>
-            <li>Custom Website/App</li>
-            <li>Responsive + Optimized</li>
-            <li>3 Revisions</li>
-            <li>Email Support</li>
-          </ul>
-        </div>
-
-        <div class="pricing-card">
-          <h3>Enterprise</h3>
-          <p class="price">$2,500+</p>
-          <ul>
-            <li>Advanced Custom Build</li>
-            <li>Backend Integration</li>
-            <li>Unlimited Revisions</li>
-            <li>Priority Support</li>
-          </ul>
-        </div>
-      </div>
+      <div id="pricing-container"></div>
     </section>
 
     <!-- Blog -->
-    <section id="blog" class="blog-container container">
+    <section id="blogs" class="blogs-container container"  style="text-align: center;">
       <div class="division"></div>
       <div class="content-text">
         <h2>Blog</h2>
-        <p>Check out what's been on my mind lately!</p>
+        <p>Check out some of my personal and paid projects</p>
       </div>
-
-      <article class="project">
-        <!-- Project 1 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project One</h3>
-              <p>React, Redux, SASS</p>
-            </div>
-
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Two</h3>
-              <p>React, Redux, SASS</p>
-            </div>
-
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Porject 3 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Three</h3>
-              <p>React, Redux, SASS</p>
-            </div>
-
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Four</h3>
-              <p>React, Redux, SASS</p>
-            </div>
-
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Five</h3>
-              <p>React, Redux, SASS</p>
-            </div>
-
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>Project Six</h3>
-              <p>React, Redux, SASS</p>
-            </div>
-
-            <div class="project-link">
-              <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank"><i class="fas fa-globe"></i></a>
-            </div>
-          </div>
-        </div>
-      </article>
-
+  
+      <div id="blogs-container" class="blogs-grid"></div>
       <a href="#" class="btn btn-secondary" target="_blank"
-        >See More <i class="fas fa-arrow-right"></i
-      ></a>
-    </section>
+    >See More <i class="fas fa-arrow-right"></i
+  ></a>
+  </section>
+
+
     <footer id="footer">
       <div class="container">
         <!-- <a href="mailto:communitypro47@gmail.com">communitypro47@gmail.com</a> -->
@@ -455,5 +224,22 @@
       </div>
     </footer>
     <script src="js/script.js"></script>
+    <script>
+      function loadSection(url, targetId) {
+        fetch(url)
+          .then(res => {
+            if (!res.ok) throw new Error("HTTP " + res.status);
+            return res.text();
+          })
+          .then(html => {
+            document.getElementById(targetId).innerHTML = html;
+          })
+          .catch(err => console.error("Error loading " + url, err));
+      }
+    
+      loadSection("projects.html", "projects-container");
+      loadSection("pricing.html", "pricing-container");
+      loadSection("blogs.html", "blogs-container");
+    </script>
   </body>
 </html>

@@ -5,6 +5,10 @@
 */
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
 
 /* variables */
 :root {
@@ -176,6 +180,12 @@ body {
   gap: 1.5rem;
   padding-bottom: 1rem;
 }
+.pricing-card {
+  flex: 0 0 300px; /* ✅ fixed width cards */
+  max-width: 300px;
+  scroll-snap-align: center;
+  margin: 0 auto;
+}
 
 /* Each card */
 .pricing-card {
@@ -186,6 +196,13 @@ body {
   text-align: center;
   border-radius: 12px;
   flex-shrink: 0;
+}
+.pricing-cards::-webkit-scrollbar {
+  display: none;
+}
+.pricing-cards {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
 }
 
 /* ✅ Desktop view (show all, centered, no scroll) */
@@ -204,15 +221,22 @@ body {
 /* ✅ Mobile view (carousel) */
 @media (max-width: 768px) {
   .pricing-cards {
-    overflow-x: auto; /* horizontal scroll */
+    overflow-x: auto; /* ✅ keep horizontal scroll */
     scroll-snap-type: x mandatory;
-    justify-content: flex-start;
     -webkit-overflow-scrolling: touch;
   }
 
+  /* Hide scrollbar visually */
+  .pricing-cards::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+  }
+  .pricing-cards {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+
   .pricing-card {
-    flex: 0 0 85%; /* takes most of screen */
-    max-width: 350px;
+    flex: 0 0 85%; /* takes most of the screen width */
     scroll-snap-align: center;
     margin: 0 auto;
   }
@@ -246,22 +270,194 @@ body {
   height: 100%;
 }
 
-.profile-image {
-  width: 150px;
-  border-radius: 50%;
-  animation: bounce 1s infinite alternate;
+#projects {
+  width: 100%;
+  overflow-x: hidden; /* prevents any sideways scroll */
 }
 
-@keyframes bounce {
-  from {
-    transform: translateY(0px);
-  }
+#projects .container {
+  max-width: 100%;
+  padding: 0 1rem; /* adds left/right breathing room */
+  margin: 0 auto; /* centers content */
+  box-sizing: border-box;
+  text-align: center;
+}
 
-  to {
-    transform: translateY(-10px);
+#projects .content-text {
+  text-align: center;
+  margin-bottom: 2rem; /* add some breathing room */
+}
+#projects .content-text h2,
+#projects .content-text p {
+  text-align: center;
+  word-wrap: break-word; /* force long text to wrap */
+  white-space: normal; /* prevents text from running off */
+}
+#projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+#projects-container.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#projects-container .card {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+#projects-container .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills the forced landscape box */
+  max-width: 100%;
+  display: block;
+}
+
+#blogs {
+  width: 100%;
+  overflow-x: hidden; /* prevents any sideways scroll */
+}
+
+#blogs .container {
+  max-width: 100%;
+  padding: 0 1rem; /* adds left/right breathing room */
+  margin: 0 auto; /* centers content */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#blogs .content-text {
+  text-align: center;
+  margin-bottom: 2rem; /* add some breathing room */
+}
+#blogs .content-text h2,
+#blogs .content-text p {
+  text-align: center;
+  word-wrap: break-word; /* force long text to wrap */
+  white-space: normal; /* prevents text from running off */
+}
+#blogs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+#blogs-container.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#blogs-container .card {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+#blogs-container .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills the forced landscape box */
+  max-width: 100%;
+  display: block;
+}
+
+#blogs .btn {
+  display: inline-block; /* shrink to fit content */
+  margin: 2rem auto; /* center horizontally */
+  text-align: center;
+}
+
+#pricing {
+  width: 100%;
+  overflow-x: hidden; /* prevents any sideways scroll */
+}
+
+#pricing .container {
+  max-width: 100%;
+  padding: 0 1rem; /* adds left/right breathing room */
+  margin: 0 auto; /* centers content */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#pricing .content-text {
+  text-align: center;
+  margin-bottom: 2rem; /* add some breathing room */
+}
+#pricing .content-text h2,
+#pricing .content-text p {
+  text-align: center;
+  word-wrap: break-word; /* force long text to wrap */
+  white-space: normal; /* prevents text from running off */
+}
+#pricing-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+#pricing-container.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#pricing-container .card {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+#proicing-container .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills the forced landscape box */
+  max-width: 100%;
+  display: block;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1000px) {
+  #projects-container.projects-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Small screens (phones) */
+@media (max-width: 600px) {
+  #projects-container.projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
 .division {
   width: 100%;
   height: 2px;
@@ -273,6 +469,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 2rem auto 5rem;
+  grid-auto-rows: 1fr;
 }
 
 #projects .btn {
@@ -282,12 +479,41 @@ body {
 
 .project {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(250px, auto);
-  grid-gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+#blog {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto 5rem;
 }
 
-#blog {
+#blog .btn {
+  align-self: center;
+  margin: 2rem 0;
+}
+#blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+  #blog-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #blog-container {
+    grid-template-columns: 1fr;
+  }
+}
+#pricing {
   display: flex;
   flex-direction: column;
   margin: 2rem auto 5rem;
@@ -297,22 +523,22 @@ body {
   scroll-snap-type: x mandatory;
   justify-content: flex-start;
 }
-#blog .btn {
-  align-self: center;
-  margin: 2rem 0;
-}
-
-.blog {
+#projects-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(250px, auto);
-  grid-gap: 0.9rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
-
-#pricing {
+.card {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9; /* landscape cards */
+  border-radius: 8px;
+  background: #f4f4f4;
   display: flex;
   flex-direction: column;
-  margin: 2rem auto 5rem;
+  justify-content: flex-end;
 }
 
 .card .project-bio p {
@@ -343,18 +569,25 @@ body {
 /* Footer */
 #footer {
   background: #111111;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem; /* keeps vertical height */
+  width: 100%;
+  margin: 0;
+  border: none;
+  flex-shrink: 0; /* don’t shrink */
 }
 
 #footer .container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
-  min-height: 160px;
-  text-align: center;
 }
-
 #footer a {
   font-size: 0.8rem;
   color: #fff;
@@ -384,8 +617,7 @@ body {
 /* Responsiveness */
 
 @media (max-width: 1000px) {
-  .project {
-    display: grid;
+  #projects-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -417,3 +649,19 @@ body {
     width: 80%;
   }
 }
+/* --- Pricing: mobile-first (scrollable, scrollbar hidden) --- */
+.pricing-cards {
+  display: flex;
+  gap: 1.25rem;
+  overflow-x: auto; /* allow swipe */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 1rem; /* breathing room so last card isn't clipped */
+}
+.pricing-cards::-webkit-scrollbar {
+  display: none;
+} /* Chrome/Safari */
+.pricing-cards {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+} /* Firefox/IE */
